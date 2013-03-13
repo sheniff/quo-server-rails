@@ -1,31 +1,29 @@
-module Quoridor
-  class API < Grape::API
-    resources :games do
+class QuoAPI < Grape::API
+  resources :games do
 
-      helpers do
+    helpers do
+
+    end
+
+    post :start do
+
+    end
+
+    segment '/:id' do
+
+      post :join do
 
       end
 
-      post :start do
+      get :moves do
 
       end
 
-      segment '/:id' do
-
-        post :join do
-
-        end
-
-        get :moves do
-
-        end
-
-        post :move do
-
-        end
+      post :move do
 
       end
 
     end
+
   end
 end
