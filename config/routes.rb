@@ -1,11 +1,6 @@
 QuoridorServerRails::Application.routes.draw do
-  get "moves/make"
 
-  get "moves/check"
-
-  get "games/start"
-
-  get "games/join"
+  mount Quoridor::API => '/'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,3 +1,4 @@
 class Move < ActiveRecord::Base
-  attr_accessible :act, :align, :game_id, :player_id, :posx, :posy
+  attr_accessible :act, :align, :player_id, :posx, :posy
+  belongs_to :game
 end
