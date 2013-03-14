@@ -1,6 +1,6 @@
 QuoridorServerRails::Application.routes.draw do
 
-  mount QuoAPI => '/'
+  mount Quoridor::API => '/'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
