@@ -7,21 +7,21 @@ module Quoridor
       end
 
       post :start do
-        present 'Calling "start"... WIP', 200
+        present 'Calling "start"... WIP'
       end
 
       segment '/:id' do
 
         post :join do
-          present 'Calling "join"... WIP', 200
+          present 'Calling "join"... WIP'
         end
 
         get :moves do
-          present 'Calling "moves"... WIP', 200
+          present 'Calling "moves"... WIP'
         end
 
         post :move do
-          present 'Calling "move"... WIP', 200
+          present 'Calling "move"... WIP'
         end
 
       end
