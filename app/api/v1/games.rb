@@ -68,7 +68,7 @@ module Quoridor
           if last_move.act == 'start'
             error! "It's not your turn to play!", 403 if params[:player_id].to_s != last_move.player_id.to_s
           else
-            error! "It's not your turn to play!", 403 if params[:player_id].to_s != ((last_move.player_id + 1) % 5).to_s
+            error! "It's not your turn to play!", 403 if params[:player_id].to_s != ((last_move.player_id + 1) % game.players).to_s
           end
 
           move = Move.new(
