@@ -23,10 +23,6 @@ module Quoridor
         #   warden.user || api_user || sandbox_user
         # end
 
-        # def current_organization
-        #   current_user.organization
-        # end
-
         # def api_user
         #   @api_user ||= params[:api_key] && User.find_for_token_authentication(auth_token: params[:api_key])
         # end
