@@ -14,6 +14,7 @@ group :development, :test do
 end
 
 group :assets do
+  gem 'uglifier', '1.2.3'
 end
 
 group :test do
