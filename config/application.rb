@@ -60,5 +60,6 @@ module QuoridorServerRails
     config.assets.version = '1.0'
 
     config.autoload_paths += %W(#{config.root}/app/api)
+    config.autoload_paths += Dir["#{config.root}/app/api/**/"]
   end
 end
