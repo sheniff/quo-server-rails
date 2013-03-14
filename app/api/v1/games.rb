@@ -60,7 +60,7 @@ module Quoridor
           error! "posy must be defined", 406                          if !params[:posy]
           error! "#{params[:act]} is not a valid move", 406           if params[:act] != "wall" and params[:act] != "move"
           error! "align must be defined when act is 'wall'", 406      if params[:act] == "wall" and !params[:align]
-          error! "#{params[:align]}is not valid. Use 'v' or 'h'", 406 if params[:align] != "v" and params[:align] != "h"
+          error! "#{params[:align]}is not valid. Use 'v' or 'h'", 406 if params[:act] == "wall" and params[:align] != "v" and params[:align] != "h"
 
           game = Game.find(params[:id])
           last_move = game.moves.last
