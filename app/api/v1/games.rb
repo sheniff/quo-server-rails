@@ -27,7 +27,7 @@ module Quoridor
           game = Game.find(params[:id])
           error! "No more players can join this game!", 406 if game.joined >= game.players
 
-          player_id = game.joined+1
+          player_id = game.joined
 
           if game.update_attribute(:joined, player_id)
 
@@ -35,7 +35,7 @@ module Quoridor
             move.game = game
             move.save!
 
-            if player_id == game.players
+            if player_id == game.players - 1
               move = Move.new(:player_id => 0, :act => 'start')
               move.game = game
               move.save!
@@ -45,7 +45,9 @@ module Quoridor
             error! "User couldn't be added to the game, try later", 500
           end
 
-          present player_id
+          @ret = { player_id: player_id }
+
+          present @ret
         end
 
         get :moves do
